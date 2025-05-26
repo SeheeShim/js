@@ -1,0 +1,10 @@
+#cat{
+    position: absolute;
+    width: 300px;
+
+}
+#start{
+    position: absolute;
+    bottom: 70%;
+    right: 80%;
+}
