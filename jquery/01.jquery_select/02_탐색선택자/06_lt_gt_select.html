@@ -7,7 +7,8 @@
 	<link rel="stylesheet" href="css/style.css"/>
 	<script type="text/javascript">
 		$(function(){
-			
+			$('#el1>li:gt(3)').css('color','red');
+			$('#el2>li:lt(3)').css('color','red');
 		});
 	</script>
 </head>
@@ -15,7 +16,7 @@
 	<span>아이디가 el1인 엘리먼트의 자식 엘리먼트인 li태그중 index가 3인 엘리먼트보다 index가 큰 엘리먼트를 선택해 글자색을 변경해 주세요.</span>
 	<div>
 		<ul id="el1">
-			<li>1</li>
+			<li>1</li> <!-- lt는 -보다 작은 / gt는 -보다 큰 -->
 			<li>2</li>
 			<li>3</li>
 			<li>4</li>
