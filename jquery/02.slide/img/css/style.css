@@ -1,0 +1,23 @@
+ul{
+    width: 290px;
+    height: 400px;
+    border: 5px solid midnightblue;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+ul li{position: absolute;
+      right:100%;
+        width: 290px;
+        height: 400px;}
+ul li:first-child{
+    right: 0;
+}
+
+/* ul li{position: absolute;
+    top:100%}
+ul li:first-child{
+    top: 0;
+} */
+
+ul li a img{width: 100%; height: 100%;}

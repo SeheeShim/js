@@ -73,20 +73,75 @@ $(function(){
     }, function(){
         clearInterval(setIn)
     });
-    
 
-    let lineTop=$('.lineTop');
-    let lineBottom=$('.lineBottom');
-    let lineLeft=$('.lineLeft');
-    let lineRight=$('.lineRight');
+    //그룹이벤트 등록하는 방법1
+    $('.btn1').on("mouseover focus", function(){
+        $('.btn1').css('background','skyblue')
+    });
 
-    function line2(){
-        setInterval1(function(){
-            lineTop.css({transform:'with(0)',transition:'.3s'})
-    },1500)
-    }
-    line2();
+    //그룹이벤트 등록하는 방법2
+    $('.btn2').on({"mouseover focus":function(){
+        $('.btn2').css('background','steelblue')
+    }});
 
+    //그룹이벤트 등록하는 방법3
+    $('.btn3').on({"mouseover":function(){
+        $(this).css('background','darkblue')
+    },"focus":function(){
+        $(this).css('background','tan')
+    }})
+
+    //event > e
+
+    $('.btn4').on("click",function(e){
+        e.preventDefault();
+
+        $('.txt4').css('background','powderblue')
+    });
+
+    $('.btn5').on("click",function(){
+
+        $('.txt5').css('background','PaleVioletRed');
+        return false;
+    });
+
+    $('.btn6').on("dblclick",function(){
+        $('.txt6').css('background','lightGreen');  
+    });
+
+    $('.hover').hover(function(){
+      $('.hover').text('한나야 잘 잤어?')
+    },function(){
+      $('.hover').text('대통령은')
+    });
+
+    $('.mouse').mouseenter(function(){
+        $('.mouse').html('text랑 html 차이는 무어얼끄아앙?')
+    });
+
+    $('.mouse').mouseleave(function(){
+        $('.mouse').html('text는 글자로 인지하고 html은 태그로 인지하무니다')
+    });
+
+    $('.focus').focus(function(){
+        $('.focus').addClass('actives')
+        $('.focus').css('outline','none')
+    });
+
+    $('.focus').blur(function(){
+        $('.focus').removeClass('actives')
+        $('.focus').css('outline','none')
+    });
+
+    $('.clickTitle').click(function(){
+        $(this).text('왕꿀잼');
+
+        let img=$('<img>',{src:'https://shop.hansalim.or.kr/im/is/activeDesigner/080601061_content1.jpg',
+                alt:'이미지'
+        });
+
+        $('#imgContainer').append(img);
+    });
 
 
 });

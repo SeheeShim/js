@@ -107,3 +107,21 @@ h2{font-size: 18px; margin-bottom: 20px;}
 
 .lineRight{width: 5px; height: 300px; background: steelblue; position: absolute;
     top:0; right:0;}
+
+.hover{
+    background: powderblue;
+    padding: 30px;
+}
+
+.mouse{
+    background: PaleVioletRed;
+    padding: 30px;
+}
+.focus.actives{
+    border: 6px solid skyblue;
+}
+.clickTitle{
+    border: 6px solid rgb(209, 71, 175);
+    padding: 30px;
+    margin-bottom: 2px;
+}
